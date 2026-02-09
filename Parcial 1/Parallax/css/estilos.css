@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    overflow: hidden;
+}
+
+body{
+    background-color: blueviolet;
+    width: 100vw;
+    height: 200vh;
+    perspective: 2px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+}
+
+.contenedor-1, .espacio{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.contenedor-1::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("../recursos/fondo2.jpg");
+    background-size: cover;
+    transform: translateZ(-1px)scale(2.2);
+}
+.contenedor-1::after{
+    content: "";
+    width: 30%;
+    height: 40%;
+    position: absolute;
+    background-image: url("../recursos/haru.png");
+    background-size: cover;
+    transform: translateX(10%);
+    transition: transform 0.3s ease;
+}
+
+.contenedor-1:hover::after{
+    transform: scale(1.05); 
+}
+
+.contenedor-1 .gups{
+    transform: translateZ(-.5px) scale(1.5,1.6);
+}
+    
+.gups{
+    width: 70%;
+    left: 15%;
+    position: absolute;
+}
+
+.espacio{
+    height: 200vh;
+    background-color: rgb(110, 43, 112);
+}
+
+
+
+
+
+/*     background-image: url(/recursos/fondo2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}*/

@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    height: 200vh; 
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.grid-container {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    position: fixed; 
+    gap: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1.5fr;
+    grid-template-areas: 
+        "parallax parallax click"
+        "onload   move     scroll";
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+.p-parallax { grid-area: parallax; background: #3498db; }
+.p-click    { grid-area: click;    background: #e74c3c; cursor: pointer; }
+.p-onload   { grid-area: onload;   background: #2ecc71; }
+.p-move     { grid-area: move;     background: #f1c40f; color: #333; }
+.p-scroll   { grid-area: scroll;   background: #9b59b6; }
