@@ -1,0 +1,17 @@
+/*referencias: https://mx.pinterest.com/pin/6966574420130778/ 
+https://mx.pinterest.com/pin/32088216098905393/*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --stone-brown: #5A4E3Cff;
+    --dim-grey: #77706Dff;
+    --dusk-blue: #1B4A7Dff;
+    --khaki-beige: #CCB68Fff;
+    --sand-dune: #EAE3C3ff;
+}

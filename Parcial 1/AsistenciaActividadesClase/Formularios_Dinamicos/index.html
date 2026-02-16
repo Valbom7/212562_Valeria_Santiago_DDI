@@ -12,6 +12,13 @@
         <input type="text" name="nombre" placeholder="Ingresa el nombre" id="input-txt-nombre"> <br>
         <label for="apellido">Apellido: </label>
         <input type="text" name="apellido" placeholder="Ingresa el apellido" id="input-txt-apellido">
+        <label for="cantidad_correos" >Ingrese la cantidad de correos</label>
+        <input type="number" name="cantidad_correos" id="cantidad_correos" onchange="cambiarNumero(event)">
+        <br>
+        <div class="contenedor_correos" id="contenedor_correos">
+
+        </div>
+        <br>
         <button id="boton_enviar">Enviar</button>
     </form>
 
