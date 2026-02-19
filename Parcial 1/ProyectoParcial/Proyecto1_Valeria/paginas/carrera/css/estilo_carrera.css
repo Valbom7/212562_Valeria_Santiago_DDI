@@ -1,0 +1,173 @@
+/* --- ESTILOS ESPECÍFICOS DE CARRERA --- */
+
+.pagina-carrera {
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("../../../recursos/fondo1.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.encabezado-carrera {
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+}
+
+.encabezado-carrera h1 {
+    font-size: 3.5rem;
+    color: var(--oro);
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    margin-bottom: 10px;
+}
+
+.encabezado-carrera p {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.cronologia-contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+/* Estilo para tarjetas de carrera */
+.tarjeta-carrera {
+    background: rgba(20, 30, 48, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(204, 182, 143, 0.2);
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+    align-items: center;
+    gap: 20px;
+    transition: 0.4s;
+}
+
+.tarjeta-carrera:hover {
+    border-color: var(--oro);
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.mensaje-espera {
+    text-align: center;
+    padding: 50px;
+    font-style: italic;
+    opacity: 0.5;
+}
+
+/* --- TARJETAS DE VICTORIA --- */
+.grilla-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+.tarjeta-victoria {
+    position: relative;
+    background: #1a1a1a;
+    border-radius: 20px;
+    padding: 30px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.oro-brillante {
+    border-color: var(--oro);
+    background: linear-gradient(145deg, #1a1a1a, #2a220a);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+.tarjeta-victoria:hover {
+    transform: translateY(-15px) rotate(2deg);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+}
+
+.cinta-victoria {
+    position: absolute;
+    top: 15px;
+    right: -30px;
+    background: var(--oro);
+    color: black;
+    padding: 5px 40px;
+    transform: rotate(45deg);
+    font-weight: bold;
+    font-family: 'Cinzel', serif;
+}
+
+.info-victoria h3 { color: var(--oro); margin-bottom: 10px; font-family: 'Cinzel'; }
+.fecha-v { font-size: 0.8rem; opacity: 0.6; margin-bottom: 10px; }
+.nota { margin-top: 15px; font-style: italic; color: #ccffcc; font-size: 0.9rem; }
+
+/* --- ESTILOS DE LA TABLA --- */
+.contenedor-tabla-carreras {
+    background: rgba(0,0,0,0.4);
+    border-radius: 20px;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.tabla-historial {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--arena-duna);
+}
+
+.tabla-historial th {
+    padding: 15px;
+    border-bottom: 2px solid var(--beige-caqui);
+    text-align: left;
+    font-family: 'Cinzel';
+    font-size: 0.8rem;
+}
+
+.tabla-historial td { padding: 12px 15px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+
+/* --- COLORES POR LUGAR --- */
+/* 1er lugar: Dorado */
+.pos-1 { background: rgba(255, 215, 0, 0.1); }
+.pos-1 .pos-numero { color: var(--oro); font-weight: bold; }
+
+/* 2do lugar: Plata */
+.pos-2 { background: rgba(192, 192, 192, 0.05); }
+.pos-2 .pos-numero { color: #C0C0C0; font-weight: bold; }
+
+/* 3er lugar: Bronce */
+.pos-3 { background: rgba(205, 127, 50, 0.05); }
+.pos-3 .pos-numero { color: #CD7F32; }
+
+/* DNF (No terminó) o DSQ (Descalificado) */
+.pos-dnf { color: #ff6666; text-decoration: line-through; }
+
+.tabla-historial tr {
+    transition: background 0.3s;
+}
+
+.tabla-historial tr:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    cursor: default;
+}
+
+/* Estilo para Descalificados o No terminados */
+.pos-dnf {
+    background: rgba(255, 0, 0, 0.1);
+    color: #ff9999;
+}
+
+.pos-numero {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* Cursor */
+* {
+  cursor: url('https://cdn.cursors-4u.net/previews/ruby-6c1405e8-32.webp') 32 32, auto !important;
+}

@@ -1,19 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrera</title>
-    <!--  Estilo General  -->
+    <title>Stay Gold - Historial de Carrera</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/estilo.css">
-    <!--  Estilo de la pagina  -->
     <link rel="stylesheet" href="css/estilo_carrera.css">
 </head>
-<body>
+<body class="pagina-carrera">
     
-</body>
-    <!--  Codigo General  -->
+    <nav>
+        <ul>
+            <li><a href="../../index.html">PRINCIPAL</a></li>
+            <li><a href="carrera.html" style="color: var(--oro);">CARRERA</a></li>
+            <li><a href="../herencias/herencia.html">HERENCIA</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenedor-principal">
+
+        <header class="encabezado-carrera revelar">
+            <h1 class="fuente-epica">HISTORIAL DE CARRERAS</h1>
+            <p>Del "Coleccionista de Plata" al triunfo internacional</p>
+            <div class="linea-decorativa"></div>
+        </header>
+
+        <main id="contenedor-cuerpo">
+            <section class="seccion-victorias">
+                <h2 class="fuente-epica titulo-seccion">Victorias Destacadas</h2>
+                <div class="grilla-tarjetas">
+                    <div class="tarjeta-victoria oro-brillante revelar">
+                        <div class="cinta-victoria">G1</div>
+                        <div class="info-victoria">
+                            <h3>Hong Kong Vase</h3>
+                            <p class="fecha-v">16 Dic 2001</p>
+                            <hr>
+                            <p><strong>Distancia:</strong> 2,400m</p>
+                            <p><strong>Jinete:</strong> Yutaka Take</p>
+                            <p class="nota">¡Su última carrera y primera victoria G1!</p>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-victoria dubai-estilo revelar">
+                        <div class="cinta-victoria">G2</div>
+                        <div class="info-victoria">
+                            <h3>Dubai Sheema Classic</h3>
+                            <p class="fecha-v">24 Mar 2001</p>
+                            <hr>
+                            <p><strong>Distancia:</strong> 2,400m</p>
+                            <p><strong>Rival:</strong> Fantastic Light</p>
+                            <p class="nota">Venció al gigante de Godolphin.</p>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-victoria tokyo-estilo revelar">
+                        <div class="cinta-victoria">G2</div>
+                        <div class="info-victoria">
+                            <h3>Meguro Kinen</h3>
+                            <p class="fecha-v">20 May 2000</p>
+                            <hr>
+                            <p><strong>Distancia:</strong> 2,500m</p>
+                            <p><strong>Estado:</strong> Suave (Soft)</p>
+                            <p class="nota">Rompió su racha de segundos puestos.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="seccion-historial revelar">
+                <h2 class="fuente-epica titulo-seccion">Historial Completo</h2>
+                <div class="contenedor-tabla-carreras">
+                    <table class="tabla-historial">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Carrera</th>
+                                <th>Grado</th>
+                                <th>Distancia</th>
+                                <th>Pos.</th>
+                                <th>Jinete</th>
+                                <th>Ganador / (2do)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cuerpo-tabla">
+                            <tr class="pos-1">
+                            <td>16/12/01</td>
+                            <td>Hong Kong Vase</td>
+                            <td>G1</td>
+                            <td>2,400m</td>
+                            <td class="pos-numero">1</td>
+                            <td>Yutaka Take</td>
+                            <td>(Ekraar)</td>
+                        </tr>
+
+                        <tr class="pos-3">
+                            <td>25/11/01</td>
+                            <td>Japan Cup</td>
+                            <td>G1</td>
+                            <td>2,400m</td>
+                            <td class="pos-numero">4</td>
+                            <td>Yutaka Take</td>
+                            <td>Jungle Pocket</td>
+                        </tr>
+
+                        <tr class="pos-dnf">
+                            <td>07/10/01</td>
+                            <td>Kyoto Daishoten</td>
+                            <td>G2</td>
+                            <td>2,400m</td>
+                            <td class="pos-numero">DSQ</td>
+                            <td>Hiroki Goto</td>
+                            <td>T M Opera O</td>
+                        </tr>
+
+                        <tr class="pos-1">
+                            <td>24/03/01</td>
+                            <td>Dubai Sheema Classic</td>
+                            <td>G2</td>
+                            <td>2,400m</td>
+                            <td class="pos-numero">1</td>
+                            <td>Yutaka Take</td>
+                            <td>(Fantastic Light)</td>
+                        </tr>
+
+                        <tr class="pos-1">
+                            <td>14/01/01</td>
+                            <td>Nikkei Shinshun Hai</td>
+                            <td>G2</td>
+                            <td>2,400m</td>
+                            <td class="pos-numero">1</td>
+                            <td>Shinji Fujita</td>
+                            <td>(San M.X.)</td>
+                        </tr>
+
+                        <tr class="pos-2">
+                            <td>24/12/00</td>
+                            <td>Arima Kinen</td>
+                            <td>G1</td>
+                            <td>2,500m</td>
+                            <td class="pos-numero">7</td>
+                            <td>Hiroki Goto</td>
+                            <td>T M Opera O</td>
+                        </tr>
+
+                        <tr class="pos-1">
+                            <td>20/05/00</td>
+                            <td>Meguro Kinen</td>
+                            <td>G2</td>
+                            <td>2,500m</td>
+                            <td class="pos-numero">1</td>
+                            <td>Yutaka Take</td>
+                            <td>(Matikane Kinnohosi)</td>
+                        </tr>
+
+                        <tr class="pos-2">
+                            <td>31/10/99</td>
+                            <td>Tenno Sho (Otoño)</td>
+                            <td>G1</td>
+                            <td>2,000m</td>
+                            <td class="pos-numero">2</td>
+                            <td>S. Kumazawa</td>
+                            <td>Special Week</td>
+                        </tr>
+
+                        <tr class="pos-3">
+                            <td>11/07/99</td>
+                            <td>Takarazuka Kinen</td>
+                            <td>G1</td>
+                            <td>2,200m</td>
+                            <td class="pos-numero">3</td>
+                            <td>S. Kumazawa</td>
+                            <td>Grass Wonder</td>
+                        </tr>
+
+                        <tr class="pos-2">
+                            <td>01/11/98</td>
+                            <td>Tenno Sho (Otoño)</td>
+                            <td>G1</td>
+                            <td>2,000m</td>
+                            <td class="pos-numero">2</td>
+                            <td>Masayoshi Ebina</td>
+                            <td>Offside Trap</td>
+                        </tr>
+
+                        <tr class="pos-2">
+                            <td>12/07/98</td>
+                            <td>Takarazuka Kinen</td>
+                            <td>G1</td>
+                            <td>2,200m</td>
+                            <td class="pos-numero">2</td>
+                            <td>S. Kumazawa</td>
+                            <td>Silence Suzuka</td>
+                        </tr>
+
+                        <tr class="pos-2">
+                            <td>03/05/98</td>
+                            <td>Tenno Sho (Primavera)</td>
+                            <td>G1</td>
+                            <td>3,200m</td>
+                            <td class="pos-numero">2</td>
+                            <td>S. Kumazawa</td>
+                            <td>Mejiro Bright</td>
+                        </tr>
+
+                        <tr class="pos-1">
+                            <td>06/09/97</td>
+                            <td>Akanko Tokubetsu</td>
+                            <td>ALW</td>
+                            <td>2,000m</td>
+                            <td class="pos-numero">1</td>
+                            <td>S. Kumazawa</td>
+                            <td>(Minamino Pheasant)</td>
+                        </tr>
+
+                        <tr class="pos-1">
+                            <td>07/06/97</td>
+                            <td>Suiren Sho</td>
+                            <td>ALW</td>
+                            <td>2,500m</td>
+                            <td class="pos-numero">1</td>
+                            <td>S. Kumazawa</td>
+                            <td>(Bin Rashid Bin)</td>
+                        </tr>
+
+                        <tr class="pos-1">
+                            <td>11/05/97</td>
+                            <td>Maiden (Novatos)</td>
+                            <td>-</td>
+                            <td>2,400m</td>
+                            <td class="pos-numero">1</td>
+                            <td>S. Kumazawa</td>
+                            <td>(Top Ladder)</td>
+                        </tr>
+                            </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
     <script src="../../js/codigo.js"></script>
-    <!--  Codigo de la pagina  -->
     <script src="js/codigo_carrera.js"></script>
+</body>
 </html>

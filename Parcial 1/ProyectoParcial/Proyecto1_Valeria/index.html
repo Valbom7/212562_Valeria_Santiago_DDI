@@ -1,30 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stay Gold</title>
+    <title>Stay Gold - Uma Musume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@300;400;700&family=Fugaz+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body> 
-    <menu>
+    <nav>
+        <ul>
+            <li><a href="#cabecera">PRINCIPAL</a></li>
+            <li><a href="paginas/carrera/carrera.html">CARRERA</a></li>
+            <li><a href="paginas/herencias/herencia.html">HERENCIA</a></li>
+        </ul>
+    </nav>
 
-    </menu>
-    <div class="contenedor_principal">
-        <div id="cabecera">
-            <header>
-                <div id="mitad1"></div>
-                <div id="mitad2"></div>
-            </header>  
-        </div>
-    <div id="contenedor_cuerpo">
-        <div class="informacion_general"></div>
-        <div class="fondo"></div>
-        <div class="pedigri"></div>
+    <div class="contenedor-principal">
+        <header id="cabecera">
+            <div id="mitad-izq">
+                <div class="nombre-fondo">STAY GOLD</div>
+                <img src="recursos/Stay_Gold_IRL.png" alt="" class="caballo-fondo" id="caballoParallax">
+                <img src="recursos/stego.png" alt="Stay Gold" class="personaje-img">
+                <div class="frase-contenedor">
+                    <blockquote class="fuente-epica">"ASESINO DE GODOLPHIN"</blockquote>
+                </div>
+            </div>
+
+            <div id="mitad-der">
+                <div class="encabezado-info">
+                    <span class="etiqueta">COLECCIONISTA DE PLATA</span>
+                    <span class="id-texto">STAY GOLD // 0422</span>
+                </div>
+                <div class="contenedor-estadisticas">
+                    <div class="caja-estadistica">
+                        <small>Distancia</small>
+                        <strong>LARGO Y MEDIO</strong>
+                    </div>
+                    <div class="caja-estadistica">
+                        <small>Estrategia</small>
+                        <strong>CERRADOR TARDÍO</strong>
+                    </div>
+                    <div class="estrellas">★★★</div>
+                </div>
+                <hr class="separador">
+                <div class="video-contenedor">
+                    <iframe width="853" height="480" src="https://www.youtube.com/embed/K6ATX-3zoIo" title="Hong Kong Vase 2001 Stay Gold Eng Sub" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="capa-video"></div> </div>
+                <div class="grilla-miniaturas">
+                    <div class="miniatura">24/03/1994 - 05/02/2015</div>
+                    <div class="miniatura">ステイゴールド (Hong Kong: 黃金旅程)</div>
+                    <div class="miniatura">"Comería carne si se la diera" - Yasutoshi Ikee</div>
+                </div>
+                <p class="aviso-legal">Representación puede variar en el juego.</p>
+            </div>
+        </header>
+
+        <main id="contenedor-cuerpo">
+            <section class="seccion-texto">
+                <div class="tarjeta-info revelar">
+                    <h2><span class="adorno-v"></span> INFO GENERAL</h2>
+                    <p>
+                        <strong>Stay Gold</strong> fue un purasangre japonés que alcanzó su mayor éxito en carreras internacionales. Engendrado por <strong>Sunday Silence</strong>, fue conocido inicialmente como el <em>"Coleccionista de Plata"</em>, ya que solía quedar segundo en las principales carreras de Grado 1.
+                    </p>
+                    <br>
+                    <p>
+                        Hacia el final de su carrera, se ganó el apodo de <strong>"Asesino de Godolphin"</strong> tras ganar notablemente el Dubai Sheema Classic y el Hong Kong Vase, derrotando a caballos legendarios como Fantastic Light.
+                    </p>
+                </div>
+
+                <div class="tarjeta-info revelar">
+                    <h2><span class="adorno-v"></span> FONDO Y CARÁCTER</h2>
+                    <p>
+                        Criado en la Granja Shiraoi, era un caballo pequeño (160 cm), pero poseía una personalidad extremadamente <strong>violenta e indomable</strong>.
+                    </p>
+                    <div class="cita-agresiva">
+                        <p>"Era tan violento que incluso comería carne si se la diera"</p>
+                        <span>— Yasutoshi Ikee (Entrenador)</span>
+                    </div>
+                    <p>
+                        Su jinete, Shigefumi Kumazawa, mencionó que Stay Gold mordía y pateaba incluso durante ejercicios de rutina, mostrando un espíritu difícil de manejar.
+                    </p>
+                </div>
+            </section>
+
+            <section class="seccion-pedigri revelar">
+                <div class="titulo-pedigri">
+                    <div class="linea-decorativa"></div>
+                    <h2>PEDIGRÍ</h2>
+                    <div class="linea-decorativa"></div>
+                </div>
+                <div class="contenedor-tabla">
+                    <table class="tabla-datos">
+                        <thead>
+                            <tr>
+                                <th>PADRE (SIRE)</th>
+                                <th>MADRE (DAM)</th>
+                                <th>ABUELO MATERNO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="texto-dorado">Sunday Silence (USA)</td>
+                                <td>Golden Sash (JPN)</td>
+                                <td>Dictus (FR)</td>
+                            </tr>
+                            <tr class="gen-detalle">
+                                <td>Halo x Wishing Well</td>
+                                <td>Dyna Sash</td>
+                                <td>Sanctus x Doronic</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer class="pie-pagina">
+            <div class="pie-contenido">
+                <div class="pie-logo">
+                    <h2 class="fuente-epica">STAY GOLD</h2>
+                    <p>La Leyenda Dorada</p>
+                </div>
+                <div class="pie-enlaces">
+                    <div class="columna">
+                        <h4>PROYECTO</h4>
+                        <a href="paginas/herencias/herencia.html">Galería</a>
+                        <a href="#contenedor-cuerpo">Historia</a>
+                    </div>
+                    <div class="columna">
+                        <h4>DATOS</h4>
+                        <a href="https://en.netkeiba.com/db/horse/1994108729/" target="_blank">Netkeiba</a>
+                        <a href="https://en.wikipedia.org/wiki/Stay_Gold_(horse)" target="_blank">Wiki</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pie-inferior">
+                <p>&copy; 2026 Proyecto por Valeria - Inspirado en Stay Gold de Uma Musume</p>
+            </div>
+        </footer>
     </div>
-        <footer></footer>  
-    </div>
-    
+
+    <script src="js/codigo.js"></script>
 </body>
-<script src="js/codigo.js"></script>
 </html>
