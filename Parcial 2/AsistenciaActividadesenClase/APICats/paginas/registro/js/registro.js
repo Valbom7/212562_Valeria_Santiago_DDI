@@ -12,7 +12,6 @@ function registrarUsuario() {
     const datos = Object.fromEntries(new FormData(formulario));
     const confirmar_contrasena = document.querySelector('#contrasena-confirmar-registro').value;
     const nombre_completo = `${datos.nombre} ${datos.apellido}`; 
-
     if (Object.values(datos).some(valor => valor === '')) {
         alert('Todos los campos son obligatorios');
         return;
