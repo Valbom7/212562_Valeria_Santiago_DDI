@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sugarcube Corner - Login</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Leckerli+One&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cortina_arriba"></div>
+    <div class="pantalla-dividida">
+        <section class="seccion-ilustracion">
+            <div class="contenido-visual">
+                <img src="https://cdn-icons-png.flaticon.com/512/13306/13306470.png" alt="Pastel" class="png-animado">
+                <h1 class="marca-agua">Sugarcube</h1>
+            </div>
+            <div class="curva-organica"></div>
+        </section>
+
+        <section class="seccion-formulario">
+            <main class="tarjeta-login">
+                <header>
+                    <h1 class="titulo-resaltado">Sugarcube Corner</h1>
+                    <p class="subtitulo">El rincón más dulce de Ponyville</p>
+                </header>
+
+                <h2 id="titulo-formulario">Iniciar Sesión</h2>
+                
+                <form id="formulario-acceso">
+                    <div class="campo">
+                        <label>Correo Electrónico</label>
+                        <input type="email" id="correo" placeholder="tu-poni@correo.com" required>
+                    </div>
+
+                    <div class="campo">
+                        <label>Contraseña</label>
+                        <input type="password" id="clave" required>
+                    </div>
+
+                    <div class="campo">
+                        <label>Tipo de Usuario</label>
+                        <select id="tipo-usuario">
+                            <option value="visitante">Visitante</option>
+                            <option value="administrador">Administrador</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="boton-magico">Ingresar</button>
+                </form>
+                
+                <p class="pie-formulario">¿Nuevo en Ponyville? <a href="paginas/registro/registro.html">Crea una cuenta</a></p>
+            </main>
+        </section>
+    </div>
+
+    <script src="js/inicio_sesion.js"></script>
+</body>
+</html>

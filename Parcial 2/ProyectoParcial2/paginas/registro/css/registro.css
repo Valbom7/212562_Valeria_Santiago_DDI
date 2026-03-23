@@ -1,0 +1,246 @@
+/* =========================================
+   VARIABLES Y BASES (Consistencia con Login)
+   ========================================= */
+:root {
+    --marrón-moka: #8B6F5D;
+    --marrón-chocolate: #5D483A;
+    --crema-suave: #FCEFDE;
+    --rosa-fresa: #FDD8E3;
+    --lila-oscuro: #A7ABDE;
+    --fuente-titulo: 'Leckerli One', cursive;
+    --fuente-cuerpo: 'Nunito', sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: var(--fuente-cuerpo);
+    background-color: var(--crema-suave);
+    overflow: hidden; /* Evita que toda la página se mueva */
+}
+
+.pantalla-dividida {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+/* =========================================
+   SECCIÓN IZQUIERDA: ILUSTRACIÓN (FIJA)
+   ========================================= */
+.seccion-ilustracion {
+    flex: 1.2;
+    background-color: var(--lila-oscuro);
+    background-image: url('https://static.wikia.nocookie.net/my-little-universe/images/0/09/Sugarcube_Corner_main_floor.png/revision/latest?cb=20200313101202');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.seccion-ilustracion::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(167, 171, 222, 0.3);
+    z-index: 2;
+}
+
+.contenido-visual {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+}
+
+.png-animado {
+    width: 280px;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+    animation: 
+        iconPop 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67) 0.5s forwards,
+        flotar 4s ease-in-out 1.3s infinite;
+    opacity: 0;
+}
+
+.curva-organica {
+    position: absolute;
+    right: -150px;
+    top: 0;
+    height: 100%;
+    width: 300px;
+    background-color: var(--lila-oscuro);
+    border-radius: 50% 0 0 50%;
+    z-index: 4;
+}
+
+/* =========================================
+   SECCIÓN DERECHA: FORMULARIO (CON SCROLL)
+   ========================================= */
+.seccion-formulario {
+    flex: 1;
+    height: 100vh;
+    background-color: var(--crema-suave);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Inicia desde arriba para el scroll */
+    overflow-y: auto;        /* PERMITE EL SCROLL SOLO AQUÍ */
+    padding: 60px 20px;      /* Espacio para que respire al scrollear */
+    z-index: 5;
+    animation: slideInRight 1s ease-out forwards;
+}
+
+/* Estilo de la barra de scroll "Cute" */
+.seccion-formulario::-webkit-scrollbar {
+    width: 8px;
+}
+.seccion-formulario::-webkit-scrollbar-thumb {
+    background: var(--marrón-moka);
+    border-radius: 10px;
+}
+
+/* TARJETA DE REGISTRO (Glassmorphism) */
+.tarjeta-registro {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 40px;
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 15px 35px rgba(139, 111, 93, 0.15);
+    text-align: center;
+    margin-bottom: 20px; /* Margen final para el scroll */
+}
+
+.titulo-resaltado {
+    font-family: var(--fuente-titulo);
+    color: var(--marrón-chocolate);
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.subtitulo {
+    color: #a69182;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+}
+
+/* FOTO PREVIEW */
+.foto-preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 0 auto 20px;
+    border: 4px solid var(--rosa-fresa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(253, 216, 227, 0.6);
+}
+
+.foto-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CAMPOS E INPUTS */
+.campo {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-left: 15px;
+    font-size: 0.85rem;
+    color: var(--marrón-moka);
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+input[type="file"] {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid white;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: var(--marrón-moka);
+    background: white;
+}
+
+/* CHECKBOX PERSONALIZADO */
+.campo-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    padding-left: 10px;
+    color: var(--marrón-chocolate);
+    font-size: 0.9rem;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--marrón-chocolate);
+}
+
+/* BOTÓN MÁGICO CON BRILLO */
+.boton-magico {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background-color: var(--marrón-chocolate);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(93, 72, 58, 0.3);
+    transition: transform 0.2s;
+}
+
+.boton-magico::after {
+    content: "";
+    position: absolute;
+    top: -50%; left: -100%; width: 50%; height: 200%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+    transform: rotate(25deg);
+    animation: rayoBrillante 3s infinite;
+}
+
+/* =========================================
+   ANIMACIONES KEYFRAMES
+   ========================================= */
+@keyframes slideInLeft { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+@keyframes slideInRight { from { transform: translateX(100%); } to { transform: translateX(0); } }
+@keyframes iconPop { 
+    0% { transform: scale(0); opacity: 0; } 
+    100% { transform: scale(1); opacity: 1; } 
+}
+@keyframes flotar { 
+    0%, 100% { transform: translateY(0); } 
+    50% { transform: translateY(-10px); } 
+}
+@keyframes rayoBrillante { 0% { left: -100%; } 20%, 100% { left: 150%; } }
+
+.pie-formulario a { color: var(--marrón-chocolate); font-weight: bold; text-decoration: none; }
+.pie-formulario a:hover { text-decoration: underline; }

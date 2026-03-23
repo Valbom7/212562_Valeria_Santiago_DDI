@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Pony - Sugarcube Corner</title>
+    <link rel="stylesheet" href="../../css/estilos.css"> 
+    <link rel="stylesheet" href="css/registro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Leckerli+One&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="cortina_arriba"></div>
+    <div class="pantalla-dividida">
+        <section class="seccion-ilustracion">
+            <div class="contenido-visual">
+                <img src="https://preview.redd.it/week-45-apples-mlp-apple-cupcakes-v0-818hca07tq0g1.png?width=640&crop=smart&auto=webp&s=8b847498ece20f20b6dd3bce3f3c79bf881335b8" alt="Cupcakes" class="png-animado">
+                <h1 class="marca-agua">Únete</h1>
+            </div>
+            <div class="curva-organica"></div>
+        </section>
+
+        <section class="seccion-formulario">
+            <main class="tarjeta-login tarjeta-registro">
+                <header>
+                    <h1 class="titulo-resaltado">Nueva Cuenta</h1>
+                    <p class="subtitulo">¡Únete a la dulzura de Ponyville!</p>
+                </header>
+
+                <form id="formulario-registro">
+                    
+                    <div class="foto-preview" id="contenedor-foto">
+                        <span id="texto-foto">Foto</span>
+                    </div>
+
+                    <div class="grid-campos">
+                        <div class="campo">
+                            <label>Nombre Completo</label>
+                            <input type="text" id="nombre_completo" placeholder="Ej. Pinkie Pie" required> <!-- Se usa el required para que el campo sea obligatorio -->
+                        </div>
+
+                        <div class="campo">
+                            <label>Correo Electrónico</label>
+                            <input type="email" id="correo_registro" required>
+                        </div>
+
+                        <div class="campo">
+                            <label>Contraseña</label>
+                            <input type="password" id="clave_registro" required>
+                        </div>
+
+                        <div class="campo">
+                            <label>Confirmar Contraseña</label>
+                            <input type="password" id="clave_verificacion" required>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label>Subir Foto de Perfil</label>
+                        <input type="file" id="foto_perfil" accept="image/*" class="input-archivo">
+                    </div>
+
+                    <div class="campo-checkbox">
+                        <input type="checkbox" id="es_administrador">
+                        <label for="es_administrador">¿Eres administrador de la tienda?</label>
+                    </div>
+
+                    <button type="submit" class="boton-magico">Crear mi Cuenta</button>
+                </form>
+                
+                <p class="pie-formulario">¿Ya eres parte? <a href="../../index.html">Inicia sesión aquí</a></p>
+            </main>
+        </section>
+    </div>
+
+    <script src="js/registro.js"></script>
+</body>
+</html>

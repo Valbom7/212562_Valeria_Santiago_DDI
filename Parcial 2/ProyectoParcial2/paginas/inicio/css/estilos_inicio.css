@@ -1,0 +1,361 @@
+/* =========================================
+   variables
+   ========================================= */
+:root {
+    --lila-principal: #D8BEE5;
+    --lila-oscuro: #A7ABDE;
+    --rosa-pastel: #FCDCE1;
+    --blanco-crema: #F3E4F5;
+    --marrón-chocolate: #5D483A;
+    --fuente-titulo: 'Leckerli One', cursive;
+    --fuente-acentos: 'Delius Swash Caps', cursive;
+    --fuente-cuerpo: 'Nunito', sans-serif;
+}
+
+/* =========================================
+   base
+   ========================================= */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--blanco-crema);
+    background-image: radial-gradient(var(--rosa-pastel) 0.5px, transparent 0.5px);
+    background-size: 20px 20px; /* Sutil patrón de puntos */
+    font-family: var(--fuente-cuerpo);
+    color: var(--marrón-chocolate);
+}
+
+/* =========================================
+   navegacion
+   ========================================= */
+.barra-navegacion {
+    background: rgba(167, 171, 222, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-family: var(--fuente-titulo);
+    font-size: 1.8rem;
+    color: white;
+    text-shadow: 2px 2px var(--lila-principal);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icono-perfil {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+}
+
+/* =========================================
+   contenedor y cabecera
+   ========================================= */
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.titulo-resaltado {
+    font-family: var(--fuente-titulo);
+    font-size: 3.5rem;
+    color: var(--lila-oscuro);
+    margin-bottom: 10px;
+}
+
+header p {
+    font-family: var(--fuente-acentos);
+    font-size: 1.2rem;
+    color: #8a7a91;
+}
+
+/* =========================================
+   grid de postres
+   ========================================= */
+.cuadricula-recetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+/* tarjetas */
+.tarjeta-postre {
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    border-bottom: 8px solid var(--lila-principal); /* El color cambia por JS */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.tarjeta-postre:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(167, 171, 222, 0.3);
+}
+
+.imagen-postre {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.info-postre {
+    padding: 20px;
+}
+
+.categoria-tag {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.info-postre h3 {
+    font-family: var(--fuente-titulo);
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.info-postre p {
+    font-size: 0.9rem;
+    color: #777;
+    line-height: 1.4;
+    height: 40px;
+    overflow: hidden;
+}
+
+/* =========================================
+   botones
+   ========================================= */
+.boton-admin, .boton-nav, .boton-salir {
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: var(--fuente-cuerpo);
+    transition: 0.3s;
+}
+
+.boton-admin { background: white; color: var(--lila-oscuro); }
+.boton-salir { background: #ffb3ba; color: white; }
+
+.boton-magico {
+    background: var(--lila-oscuro);
+    color: white;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    width: 100%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(167, 171, 222, 0.4);
+}
+
+/* formulario grid */
+.grid-formulario {
+    background: white;
+    padding: 30px;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.col-completa { grid-column: span 2; }
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 15px;
+    border: 2px solid var(--blanco-crema);
+    background: var(--blanco-crema);
+    outline: none;
+    box-sizing: border-box;
+}
+
+input:focus { border-color: var(--lila-principal); }
+
+/* favoritos */
+#seccion-favoritos {
+    margin-top: 20px;
+    border: 2px dashed var(--lila-oscuro);
+}
+
+/* manejo de visibilidad (para el JS) */
+.oculto {
+    display: none !important;
+}
+
+/* panel de Favoritos */
+.panel-favoritos {
+    display: none; 
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    border: 2px dashed var(--lila-oscuro);
+}
+
+.cabecera-favoritos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo-favoritos {
+    font-family: var(--fuente-titulo);
+    color: var(--marrón-chocolate);
+    margin: 0;
+}
+
+.btn-cerrar-x {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--marrón-chocolate);
+    transition: transform 0.2s;
+}
+
+.btn-cerrar-x:hover {
+    transform: scale(1.2);
+    color: #ff6b6b;
+}
+
+/* boton salir */
+.boton-salir {
+    background-color: #ffb3ba; 
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.boton-salir:hover {
+    background-color: #ff8c94;
+    box-shadow: 0 4px 10px rgba(255, 179, 186, 0.5);
+}
+
+/* =========================================
+   eliminar
+   ========================================= */
+
+.btn-eliminar {
+    background-color: #FFB3BA; 
+    color: #8B4349;           
+    border: 2px solid #FFD1D6;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 0px #F8A1A9; 
+}
+
+.btn-eliminar:hover {
+    background-color: #FF8C94;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0px #F08088;
+}
+
+.btn-eliminar:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0px #F08088;
+}
+
+.contenedor-botones-tarjeta {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+/* guardar */
+
+.btn-guardar {
+    background-color: #A7ABDE;
+    color: white;
+    border: 2px solid #D8BEE5;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 0px #8286C4;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-guardar:hover {
+    background-color: #B9BDEB;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0px #8286C4;
+    filter: brightness(1.05);
+}
+
+.btn-guardar:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0px #8286C4;
+}
+
+
+.btn-guardar::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(30deg);
+    transition: all 0.5s;
+}
+
+.btn-guardar:hover::after {
+    left: 120%;
+}
+
+/* cursor */
+* {
+  cursor: url('https://cdn.cursors-4u.net/previews/smores-5acb581b-32.webp') 32 32, auto !important;
+}

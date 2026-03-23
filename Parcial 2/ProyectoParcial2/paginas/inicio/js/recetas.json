@@ -1,0 +1,166 @@
+[
+  {
+    "id": 1,
+    "nombre_producto": "Maravilla de Merengue Mascarpone y Mazapán",
+    "repostero": "Sra. Cake",
+    "precio": 350.00,
+    "descripcion": "El famoso MMMM. Una obra maestra de múltiples capas con merengue y mazapán fino.",
+    "imagen_url": "img/mmmm.png",
+    "categoria": "Especiales",
+    "color_tema": "#f8c8dc"
+  },
+  {
+    "id": 2,
+    "nombre_producto": "Cupcakes de Pinkie Pie",
+    "repostero": "Pinkie Pie",
+    "precio": 15.00,
+    "descripcion": "Panquecitos súper esponjosos con chispas de colores y mucho betún de vainilla.",
+    "imagen_url": "img/cupcake_pinkie.png",
+    "categoria": "Cupcakes",
+    "color_tema": "#ff69b4"
+  },
+  {
+    "id": 3,
+    "nombre_producto": "Éclairs Excepcionales",
+    "repostero": "Gustave Le Grand",
+    "precio": 45.00,
+    "descripcion": "Postres franceses rellenos de crema pastelera, dignos de un chef de alta cocina.",
+    "imagen_url": "img/eclairs.jpg",
+    "categoria": "Pastelería Fina",
+    "color_tema": "#d2b48c"
+  },
+  {
+    "id": 4,
+    "nombre_producto": "Donatopía",
+    "repostero": "Donut Joe",
+    "precio": 85.00,
+    "descripcion": "Un conjunto de donas glaseadas que forman una pequeña ciudad comestible.",
+    "imagen_url": "img/donatopia.jpg",
+    "categoria": "Donas",
+    "color_tema": "#f5deb3"
+  },
+  {
+    "id": 5,
+    "nombre_producto": "Pay de Manzana Zap",
+    "repostero": "Abuela Smith",
+    "precio": 110.00,
+    "descripcion": "Hecho con las místicas manzanas arcoíris de Sweet Apple Acres.",
+    "imagen_url": "img/pay_zap.png",
+    "categoria": "Pays",
+    "color_tema": "#98fb98"
+  },
+  {
+    "id": 6,
+    "nombre_producto": "Mousse de Chocolate (Alce)",
+    "repostero": "Mulia Mild",
+    "precio": 130.00,
+    "descripcion": "Un mousse de chocolate suave esculpido con la forma de un elegante alce.",
+    "imagen_url": "img/mousse_alce.png",
+    "categoria": "Especiales",
+    "color_tema": "#8b4513"
+  },
+   {
+    "id": 7,
+    "nombre_producto": "Pastel de Bodas Real",
+    "repostero": "Sra. Cake",
+    "precio": 1200.00,
+    "descripcion": "Un pastel monumental de siete pisos con flores de fondant, inspirado en el amor de Cadance y Shining Armor.",
+    "imagen_url": "img/pastel_real.png",
+    "categoria": "Especiales",
+    "color_tema": "#e6e6fa"
+  },
+  {
+    "id": 8,
+    "nombre_producto": "Cupcakes de la Amistad",
+    "repostero": "Cutie Mark Crusaders",
+    "precio": 10.00,
+    "descripcion": "Pequeños pastelillos decorados con mucho entusiasmo (y tal vez un poco de desorden) por Apple Bloom, Sweetie Belle y Scootaloo.",
+    "imagen_url": "img/cupcakes_cmc.png",
+    "categoria": "Cupcakes",
+    "color_tema": "#ffdead"
+  },
+  {
+    "id": 9,
+    "nombre_producto": "Manzanas de Caramelo Brillantes",
+    "repostero": "Applejack",
+    "precio": 20.00,
+    "descripcion": "Manzanas rojas crujientes cubiertas con una capa de caramelo cristalino y chispas de colores.",
+    "imagen_url": "img/manzanas_caramelo.png",
+    "categoria": "Frutas Dulces",
+    "color_tema": "#ff4500"
+  },
+  {
+    "id": 10,
+    "nombre_producto": "Pastel de Chocolate de Canterlot",
+    "repostero": "Chef de la Corte",
+    "precio": 250.00,
+    "descripcion": "Un pastel denso de chocolate oscuro servido en las galas de la Princesa Celestia.",
+    "imagen_url": "img/pastel_canterlot.jpg",
+    "categoria": "Pastelería Fina",
+    "color_tema": "#4b0082"
+  },
+  {
+    "id": 11,
+    "nombre_producto": "Galletas de Flor de Loto",
+    "repostero": "Lotus Blossom",
+    "precio": 35.00,
+    "descripcion": "Galletas ligeras con esencia de flores, ideales para una tarde de spa.",
+    "imagen_url": "img/galletas_loto.jpg",
+    "categoria": "Galletas",
+    "color_tema": "#00ced1"
+  },
+  {
+    "id": 12,
+    "nombre_producto": "Tartaleta de Cerezas de Dodge Junction",
+    "repostero": "Cherry Jubilee",
+    "precio": 55.00,
+    "descripcion": "Rellena con las cerezas más dulces de la colina, con una costra de mantequilla salada.",
+    "imagen_url": "img/tartaleta_cereza.jpg",
+    "categoria": "Pays",
+    "color_tema": "#dc143c"
+  },
+  {
+    "id": 13,
+    "nombre_producto": "Rollos de Canela Ponyville",
+    "repostero": "Sr. Cake",
+    "precio": 30.00,
+    "descripcion": "Rollitos calientes con un glaseado de crema que se derrite en la boca.",
+    "imagen_url": "img/rollos_canela.jpg",
+    "categoria": "Panadería",
+    "color_tema": "#d2b48c"
+  },
+  {
+    "id": 14,
+    "nombre_producto": "Muffins de Moras",
+    "repostero": "Derpy Hooves",
+    "precio": 12.00,
+    "descripcion": "¡Simplemente muffins! Con muchas moras azules y un aroma irresistible.",
+    "imagen_url": "img/muffins_derpy.jpg",
+    "categoria": "Panadería",
+    "color_tema": "#add8e6"
+  },
+  {
+    "id": 15,
+    "nombre_producto": "Gelatina de Nubes de Cloudsdale",
+    "repostero": "Rainbow Dash",
+    "precio": 40.00,
+    "descripcion": "Una gelatina ligera y esponjosa que parece flotar en el plato. ¡Sabor a arcoíris!",
+    "imagen_url": "img/gelatina_nubes.jpg",
+    "categoria": "Postres Fríos",
+    "color_tema": "#87ceeb"
+  },
+  {
+    "id": 16,
+    "nombre_producto": "Sorpresa de Daisy",
+    "repostero": "Daisy",
+    "precio": 25.00,
+    "descripcion": "Un postre decorado con margaritas comestibles y un centro de mermelada de durazno.",
+    "imagen_url": "img/sorpresa_daisy.jpg",
+    "categoria": "Especiales",
+    "color_tema": "#fafad2"
+  }
+
+]
+
+
+ 

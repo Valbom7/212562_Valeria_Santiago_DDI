@@ -1,0 +1,309 @@
+* {
+  cursor: url('https://cdn.cursors-4u.net/previews/smores-5acb581b-32.webp') 32 32, auto !important;
+}
+
+/* Variables de paletas de colores y fuentes */
+:root {
+    --marrón-moka: #8B6F5D;
+    --marrón-chocolate: #5D483A;
+    --crema-suave: #FCEFDE;
+    --rosa-fresa: #FDD8E3;
+    --lila-oscuro: #A7ABDE; 
+    --fuente-titulo: 'Leckerli One', cursive;
+    --fuente-cuerpo: 'Nunito', sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: var(--fuente-cuerpo);
+    overflow: hidden;
+}
+
+.pantalla-dividida {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.cortina_arriba{
+     background-image: url('https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_vQT2liXAUdGpUED78a1_wq4hDTYNS_9e074JoA86ljNykh7aZh2ZbkDJz-oxKuqEB1CI0qpR2LReZtG5OSD277RYudw8ErIzkLyyUlK07g5hSR2TJe41c=s0-d');
+      top: 0px; left: 0px; 
+      width: 100%; height:30px; 
+      z-index: 100;
+      position: fixed;
+}
+
+/* SECCIÓN IZQUIERDA: png de Sugarcube Corner */
+.seccion-ilustracion {
+    flex: 1.3;
+    background-color: var(--lila-oscuro);
+    background-image: url('https://static.wikia.nocookie.net/my-little-universe/images/0/09/Sugarcube_Corner_main_floor.png/revision/latest?cb=20200313101202'); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.seccion-ilustracion::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(167, 171, 222, 0.4);
+    z-index: 2;
+}
+
+.contenido-visual {
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 3;
+}
+
+.png-animado {
+    animation: 
+        iconPop 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67) 0.5s forwards,
+        flotar 4s ease-in-out 1.3s infinite;
+    opacity: 0;
+    
+}
+
+.marca-agua {
+    font-family: var(--fuente-titulo);
+    font-size: 5rem;
+    opacity: 0.5;
+    position: absolute;
+    bottom: 20px;
+    color: white;
+    left: 60px;
+    text-shadow: -10px 10px 0px var(--marrón-chocolate),
+                 -20px 20px 0px var(--marrón-moka),
+                 -30px 30px 0px var(--crema-suave);
+}
+
+/* CURVA */
+.curva-organica {
+    position: absolute;
+    right: -150px;
+    top: 0;
+    height: 100%;
+    width: 300px;
+    background-color: var(--lila-oscuro);
+    border-radius: 50% 0 0 50%;
+    z-index: 4;
+    animation: fadeIn 1.2s ease-in forwards;
+}
+
+/* SECCIÓN DERECHA: Formulario */
+.seccion-formulario {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--crema-suave);
+    z-index: 5;
+    animation: slideInRight 1s ease-out forwards;
+}
+
+.tarjeta-login {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px);
+    padding: 60px 50px;
+    border-radius: 40px;
+    width: 420px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 15px 35px rgba(139, 111, 93, 0.2);
+    text-align: center;
+    animation: fadeIn 0.8s ease-in 0.8s forwards;
+    opacity: 0;
+}
+
+.titulo-resaltado {
+    font-family: var(--fuente-titulo);
+    color: var(--marrón-chocolate); 
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+#titulo-formulario{
+    color: var(--marrón-moka);
+}
+
+.subtitulo {
+    color: #a69182;
+    margin-bottom: 35px;
+    font-weight: bold;
+}
+
+/* INPUTS REDONDEADOS */
+.campo {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+label {
+    margin-left: 15px;
+    font-size: 0.85rem;
+    color: #a69182;
+    font-weight: 700;
+}
+
+input, select {
+    width: 100%;
+    padding: 15px 22px;
+    margin-top: 5px;
+    border: 2px solid white;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: var(--marrón-moka);
+    box-shadow: 0 0 10px rgba(139, 111, 93, 0.3);
+}
+
+/* BOTÓN  */
+.boton-magico {
+    position: relative; 
+    overflow: hidden;    
+    background-color: var(--marrón-chocolate);
+    color: white;
+    padding: 16px;
+    border-radius: 30px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(93, 72, 58, 0.3);
+}
+
+/* El rayo de luz */
+.boton-magico::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 50%;
+    height: 200%;
+    background: linear-gradient(
+        to right, 
+        rgba(255, 255, 255, 0) 0%, 
+        rgba(255, 255, 255, 0.5) 50%, 
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(25deg);
+    transition: none;
+    animation: rayoBrillante 3s infinite;
+}
+
+@keyframes rayoBrillante {
+    0% { left: -100%; }
+    20% { left: 150%; } 
+    100% { left: 150%; }
+}
+
+.boton-magico:hover {
+    background-color: var(--marrón-moka);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(139, 111, 93, 0.5);
+}
+
+.boton-magico:hover::after {
+    animation-duration: 1.5s; 
+}
+
+
+.boton-magico:active {
+    transform: scale(0.95);
+}
+
+.pie-formulario a {
+    color: var(--marrón-chocolate);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.pie-formulario a:hover {
+    text-decoration: underline;
+    color: var(--marrón-moka);
+}
+
+/* --- ANIMACIONES KEYFRAMES --- */
+
+/* Entrada de lado para la sección de la izquierda */
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Entrada de lado para el formulario */
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Efecto de pop para el pastel y el logo */
+@keyframes iconPop {
+    0% { transform: scale(0) rotate(-20deg); opacity: 0; }
+    70% { transform: scale(1.1) rotate(5deg); }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+/* Aparecer suavemente */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* --- ESTILO PARA EL SELECT (TIPO DE USUARIO) --- */
+
+select#tipo-usuario {
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%238B6F5D' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center; 
+    background-size: 15px;
+    
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--marrón-chocolate);
+    font-family: var(--fuente-cuerpo);
+    border: 2px solid white;
+    
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efecto cuando pasas el mouse por el select */
+select#tipo-usuario:hover {
+    background-color: var(--rosa-fresa);
+    border-color: var(--marrón-moka);
+    transform: translateY(-2px);
+}
+
+/* Estilo para las opciones dentro del menú */
+select#tipo-usuario option {
+    background-color: white;
+    color: var(--marrón-chocolate);
+    padding: 10px;
+}
+
+/* Animación de "Brillo" al hacer foco */
+select#tipo-usuario:focus {
+    border-color: var(--marrón-moka);
+    box-shadow: 0 0 15px rgba(139, 111, 93, 0.4);
+    background-color: white;
+}

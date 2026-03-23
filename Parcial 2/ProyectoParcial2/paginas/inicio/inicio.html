@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Sugarcube Corner</title>
+    <link rel="stylesheet" href="../../css/estilos_login.css">
+    <link rel="stylesheet" href="css/estilos_inicio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Leckerli+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="barra-navegacion">
+        <div class="logo"> Sugarcube Corner</div>
+        <div class="menu">
+            <div id="contenedor-perfil" class="perfil-usuario">
+                <img id="foto-usuario-nav" src="" alt="Perfil" class="icono-perfil">
+            </div>
+            
+            <span id="saludo-usuario">Hola, Poni</span>
+            
+            <button id="btn-toggle-form" class="boton-admin" style="display: none;"> Nuevo Postre</button>
+            
+            <label id="seccion-subir" class="boton-admin" style="display: none;">
+                 Importar JSON
+                <input type="file" id="archivo-json" accept=".json" style="display: none;">
+            </label>
+            
+           <button id="btn-cerrar-sesion" class="boton-salir">Cerrar Sesión</button>
+
+<section id="seccion-favoritos" class="panel-favoritos">
+    <div class="cabecera-favoritos">
+        <h2 class="titulo-favoritos">Mis Antojos Guardados</h2>
+        <button id="btn-cerrar-favoritos" class="btn-cerrar-x">✕</button>
+    </div>
+    <div id="contenedor-favoritos" class="cuadricula-recetas">
+        </div>
+    <hr class="divisor">
+</section>
+        </div>
+        <div id="contenedor-favoritos" class="cuadricula-recetas">
+            </div>
+        <hr class="divisor">
+    </section>
+ </div>
+
+        <button id="btn-ver-favoritos" class="boton-nav"> Mis Favoritos</button>
+
+  
+    </nav>
+
+    <div class="contenedor-principal">
+        <header>
+            <h1 class="titulo-resaltado">Panel de Repostería</h1>
+            <p>Gestiona y descubre las delicias más dulces de Ponyville</p>
+        </header>
+
+        <section id="seccion-formulario-nuevo" class="seccion-formulario" style="display: none;">
+            <h3> Agregar Nueva Delicia</h3>
+            <form id="forma-nuevo-postre" class="grid-formulario">
+                
+                <div class="campo">
+                    <label for="nuevo-nombre">Nombre del Postre:</label>
+                    <input type="text" id="nuevo-nombre" placeholder="Ej. Pastel Arcoíris" required>
+                </div>
+
+                <div class="campo">
+                    <label for="nueva-categoria">Categoría:</label>
+                    <select id="nueva-categoria">
+                        <option value="Cupcakes">Cupcakes</option>
+                        <option value="Pays">Pays</option>
+                        <option value="Galletas">Galletas</option>
+                        <option value="Especiales">Especiales</option>
+                        <option value="Panadería">Panadería</option>
+                        <option value="Frutas Dulces">Frutas Dulces</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="nuevo-precio">Precio ($):</label>
+                    <input type="number" id="nuevo-precio" step="0.5" placeholder="0.00" required>
+                </div>
+
+                <div class="campo">
+                    <label for="nuevo-repostero">Repostero:</label>
+                    <input type="text" id="nuevo-repostero" placeholder="¿Quién lo horneó?">
+                </div>
+
+                <div class="campo col-completa">
+                    <label for="nueva-descripcion">Descripción:</label>
+                    <input type="text" id="nueva-descripcion" placeholder="Describe el sabor de este postre..." required>
+                </div>
+
+                <div class="campo">
+                    <label for="nuevo-color">Color del Tema:</label>
+                    <input type="color" id="nuevo-color" value="#ff69b4">
+                </div>
+
+                <div class="campo">
+                    <label for="nueva-url">Imagen (Ruta):</label>
+                    <input type="text" id="nueva-url" placeholder="img/ejemplo.jpg">
+                </div>
+
+                <button type="submit" class="boton-magico btn-insertar">Añadir al Inventario</button>
+            </form>
+        </section>
+
+        <hr class="divisor">
+
+        <main id="contenedor-recetas" class="cuadricula-recetas">
+            <p class="mensaje-carga">Cargando las delicias de la vitrina...</p>
+        </main>
+    </div>
+
+    <script src="js/inicio.js"></script>
+</body>
+</html>
